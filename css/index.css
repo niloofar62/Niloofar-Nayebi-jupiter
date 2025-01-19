@@ -1,0 +1,95 @@
+body {
+    background-color: #f0f0f0; /* Light gray background */
+    color: #333; /* Dark gray text */
+    font-family: 'Roboto', sans-serif; /* Modern sans-serif font */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Style for the main header */
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 20px;
+    color: #222;
+}
+
+/* Section styles */
+section {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    max-width: 800px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* About section */
+#About p {
+    text-align: justify;
+}
+
+/* Experience section */
+#Experience ul {
+    list-style: none;
+    padding: 0;
+}
+
+#Experience ul li {
+    margin: 10px 0;
+    padding-left: 20px;
+    text-indent: -20px;
+}
+
+#Experience ul li::before {
+    content: "• ";
+    color: #007bff; /* Blue bullet point */
+}
+
+/* Connect section */
+#Connect h2 {
+    margin-bottom: 10px;
+}
+
+#Connect ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+#Connect a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+#Connect a:hover {
+    color: #777f8800;
+}
+
+/* Profile image */
+.profile-image {
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    width: 150px; /* Set fixed width */
+    height: 150px; /* Set fixed height (same as width) */
+    object-fit: cover; /* Ensure the image fills the circle */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle; /* Ensure vertical alignment */
+    display: inline-block;
+    margin: 0; /* Remove any default margins */
+    padding: 0; /* Remove any default padding */
+    object-fit: contain; /* Ensure the image fits its dimensions */
+}
