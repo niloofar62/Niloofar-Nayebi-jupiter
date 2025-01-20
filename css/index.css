@@ -1,3 +1,4 @@
+
 /* Global Styles */
 body {
     background-color: #f0f0f0;
@@ -12,24 +13,27 @@ h1 {
     text-transform: uppercase;
     text-align: center;
     margin-top: 20px;
+    font-size: 2.5rem; /* Default size for desktops */
     color: #222;
 }
 
 /* Navigation Header */
 nav {
-    position: sticky; /* Makes the header sticky */
-    top: 0; /* Sticks to the top */
-    background-color: #fff; /* White background */
+
+    position: sticky;
+    top: 0;
+    background-color: #fff;
     padding: 10px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    z-index: 1000; /* Ensures it stays above other elements */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
 nav ul {
-    display: flex; /* Horizontal layout */
-    justify-content: center; /* Center the items */
-    gap: 20px; /* Add space between links */
-    list-style: none; /* Remove bullets */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+
     margin: 0;
     padding: 0;
 }
@@ -40,19 +44,23 @@ nav a {
     font-weight: bold;
 }
 
+
+
 nav a:hover {
-    color: #0056b3; /* Darker blue on hover */
+    color: #0056b3;
+
 }
 
 /* Profile Image */
 .profile-image {
     display: block;
-    margin: 0 auto 20px;
-    border-radius: 50%; /* Make the image a circle */
+
+    border-radius: 50%;
     width: 150px;
     height: 150px;
-    object-fit: cover; /* Crop and fit the image */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
 }
 
 /* Section Styles */
@@ -65,52 +73,69 @@ section {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Experience Section (Flexbox Layout) */
+
+/* Experience Section - Grid Layout */
 #Experience {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    display: grid;
+    gap: 20px; /* Space between experience items */
 }
 
 .experience-item {
-    display: flex;
-    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
-    gap: 10px;
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Two columns: title and dates */
+    grid-template-rows: auto auto; /* Two rows: title/dates and description */
+    gap: 10px; /* Space between grid items */
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .job-title {
-    flex: 2; /* Take more space for the job title */
+    grid-column: 1 / 2; /* Place in the first column */
+
     font-weight: bold;
 }
 
 .job-dates {
-    flex: 1; /* Take less space for dates */
+
+    grid-column: 2 / 3; /* Place in the second column */
+
     text-align: right;
     color: #555;
 }
 
 .job-description {
-    flex-basis: 100%; /* Span full width */
+
+    grid-column: 1 / 3; /* Span both columns */
+
     color: #333;
     margin-top: 5px;
 }
 
-/* Connect Section (Flexbox Layout) */
+
+/* Connect Section - Grid Layout */
+
 #Connect ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adaptive grid */
+    gap: 20px;
     list-style: none;
     padding: 0;
-    display: flex; /* Align items horizontally */
-    gap: 20px; /* Space between items */
-    justify-content: center; /* Center align the icons */
+
+
 }
 
 #Connect a {
+    display: flex; /* Align icon and text */
+    align-items: center;
+    gap: 8px;
     text-decoration: none;
     color: #007bff;
     font-weight: bold;
-    display: flex; /* Align icon and text */
-    align-items: center;
-    gap: 8px; /* Space between icon and text */
+
+    justify-content: center; /* Center content within grid item */
+
 }
 
 .social-icon {
@@ -119,3 +144,63 @@ section {
     display: inline-block;
     vertical-align: middle;
 }
+
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 2rem; /* Smaller font size for tablets */
+        color: #007bff; /* Change header color */
+    }
+
+    section {
+        padding: 15px; /* Reduce padding for smaller screens */
+        max-width: 90%; /* Use more screen width */
+    }
+
+    #Experience {
+        gap: 15px; /* Reduce spacing between experience items */
+    }
+
+    #Connect ul {
+        gap: 15px; /* Decrease gap between social icons */
+    }
+
+    .profile-image {
+        width: 120px; /* Smaller profile image */
+        height: 120px;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+    h1 {
+        font-size: 1.5rem; /* Smaller font size for mobiles */
+        margin-top: 10px;
+    }
+
+    section {
+        padding: 10px;
+        max-width: 95%; /* Use more screen width for smaller devices */
+    }
+
+    #Experience {
+        flex-direction: column; /* Ensure items stack vertically */
+    }
+
+    #Connect ul {
+        flex-direction: column; /* Stack social links vertically */
+        gap: 10px;
+    }
+
+    .profile-image {
+        width: 100px; /* Smaller profile image */
+        height: 100px;
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation items vertically */
+        gap: 10px;
+    }
+}
+
