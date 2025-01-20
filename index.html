@@ -10,9 +10,22 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+    <!-- Sticky Navigation Header -->
+    <nav>
+        <ul>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Experience">Experience</a></li>
+            <li><a href="#Skills">Skills</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#Connect">Connect</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Header -->
     <h1>Niloofar's Portfolio</h1>
     <img src="images/profile.jpg" alt="Niloofar's Profile Picture" class="profile-image">
-    
+
+    <!-- About Section -->
     <section id="About">
         <h2>About</h2>
         <p>
@@ -20,17 +33,33 @@
         </p>
     </section>
 
+    <!-- Experience Section -->
     <section id="Experience">
         <h2>Experience</h2>
-        <ul>
-            <li>Developed robust solutions using React/Redux and AWS</li>
-            <li>Freelance UX/UI Designer for various clients</li>
-            <li>Completed capstone project: Interactive housekeeping management app</li>
-            <li>7 years of experience as an electrical engineer</li>
-            <li>Proficient in Python, JavaScript, TypeScript, and Tailwind</li>
-        </ul>
+        <div class="experience-item">
+            <div class="job-title">React/Redux Developer</div>
+            <div class="job-dates">Jan 2023 - Present</div>
+            <div class="job-description">Developed robust solutions using React/Redux and AWS.</div>
+        </div>
+        <div class="experience-item">
+            <div class="job-title">Freelance UX/UI Designer</div>
+            <div class="job-dates">Jun 2021 - Dec 2022</div>
+            <div class="job-description">Designed user-friendly interfaces for various clients.</div>
+        </div>
     </section>
 
+    <!-- Skills Section -->
+    <section id="Skills">
+        <h2>Skills</h2>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="Projects">
+        <h2>Projects</h2>
+        <ul></ul>
+    </section>
+
+    <!-- Connect Section -->
     <section id="Connect">
         <h2>Connect</h2>
         <ul>
@@ -48,5 +77,6 @@
     </section>
 </body>
 </html>
+
 
 
