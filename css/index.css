@@ -19,6 +19,7 @@ h1 {
 
 /* Navigation Header */
 nav {
+
     position: sticky;
     top: 0;
     background-color: #fff;
@@ -32,6 +33,7 @@ nav ul {
     justify-content: center;
     gap: 20px;
     list-style: none;
+
     margin: 0;
     padding: 0;
 }
@@ -43,19 +45,22 @@ nav a {
 }
 
 
+
 nav a:hover {
     color: #0056b3;
+
 }
 
 /* Profile Image */
 .profile-image {
     display: block;
-    margin: 0 auto 20px;
+
     border-radius: 50%;
     width: 150px;
     height: 150px;
     object-fit: cover;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
 }
 
 /* Section Styles */
@@ -67,6 +72,7 @@ section {
     max-width: 800px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 
 /* Experience Section - Grid Layout */
 #Experience {
@@ -87,28 +93,37 @@ section {
 
 .job-title {
     grid-column: 1 / 2; /* Place in the first column */
+
     font-weight: bold;
 }
 
 .job-dates {
+
     grid-column: 2 / 3; /* Place in the second column */
+
     text-align: right;
     color: #555;
 }
 
 .job-description {
+
     grid-column: 1 / 3; /* Span both columns */
+
     color: #333;
     margin-top: 5px;
 }
 
+
 /* Connect Section - Grid Layout */
+
 #Connect ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adaptive grid */
     gap: 20px;
     list-style: none;
     padding: 0;
+
+
 }
 
 #Connect a {
@@ -118,7 +133,9 @@ section {
     text-decoration: none;
     color: #007bff;
     font-weight: bold;
+
     justify-content: center; /* Center content within grid item */
+
 }
 
 .social-icon {
@@ -127,6 +144,7 @@ section {
     display: inline-block;
     vertical-align: middle;
 }
+
 
 /* Tablet Styles */
 @media (max-width: 1024px) {
@@ -185,3 +203,4 @@ section {
         gap: 10px;
     }
 }
+
