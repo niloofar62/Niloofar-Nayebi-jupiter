@@ -262,3 +262,100 @@ footer {
     }
 }
 
+
+ #LeaveMessage {
+    max-width: 840px; /* Match the width of both sections */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Ensures padding doesn't increase width */
+}
+
+/* Center the heading */
+#LeaveMessage h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+/* Arrange Name and Email in one row with proper spacing */
+.form-row {
+    display: flex;
+    gap: 20px; /* Adds space between Name and Email fields */
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Ensure both inputs take equal space */
+.form-row div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label styling */
+#LeaveMessage label {
+    font-weight: bold;
+    color: #333;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+/* Input and textarea styling */
+#LeaveMessage input,
+#LeaveMessage textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease-in-out;
+    box-sizing: border-box;
+}
+
+/* Prevent inputs from overflowing the section */
+#usersName,
+#usersEmail,
+#usersMessage {
+    max-width: 100%; /* Ensures they stay within section */
+}
+
+/* Submit Button */
+#LeaveMessage button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#LeaveMessage button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    #Connect, #LeaveMessage {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .form-row {
+        flex-direction: column; /* Stack inputs on small screens */
+        gap: 10px;
+    }
+}
+
+/* Initially hide the Messages section */
+#messages {
+    display: none;
+}
