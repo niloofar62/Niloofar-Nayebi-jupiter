@@ -359,3 +359,58 @@ footer {
 #messages {
     display: none;
 }
+
+/* Projects Section */
+#Projects {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the list */
+#Projects ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Style individual project items */
+#Projects li {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Make the project names clickable */
+#Projects li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hover effect */
+#Projects li:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #Projects ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #Projects li {
+        width: 80%;
+    }
+}

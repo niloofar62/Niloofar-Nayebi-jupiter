@@ -159,3 +159,44 @@ document.addEventListener("DOMContentLoaded", function () {
   // Hide the section initially
   toggleMessageSection();
 });
+
+// const GITHUB_USERNAME = "niloofar62";
+// fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos`)
+//   .then((response) => response.json())
+//   .then((data) => console.log(data))
+//   .catch((error) => console.log("Error fetching data :", error));
+
+const GITHUB_USERNAME = "niloofar62"; // Replace with your GitHub username
+
+// Select the Projects section and its <ul> list
+const projectSection = document.getElementById("Projects");
+const projectList = projectSection.querySelector("ul");
+
+// Fetch repositories from GitHub API
+fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos`)
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error(
+        `GitHub API error: ${response.status} ${response.statusText}`
+      );
+    }
+    return response.json();
+  })
+  .then((repositories) => {
+    if (repositories.length === 0) {
+      projectSection.innerHTML += "<p>No projects found.</p>";
+      return;
+    }
+
+    // Loop through repositories and create list items
+    repositories.forEach((repo) => {
+      const project = document.createElement("li"); // Create <li> element
+      project.innerHTML = `<a href="${repo.html_url}" target="_blank">${repo.name}</a>`; // Add link to repo
+      projectList.appendChild(project); // Append to projectList
+    });
+  })
+  .catch((error) => {
+    console.error("Error fetching GitHub repositories:", error);
+    projectSection.innerHTML +=
+      "<p>Failed to load projects. Please try again later.</p>";
+  });
